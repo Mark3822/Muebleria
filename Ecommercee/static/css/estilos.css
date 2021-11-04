@@ -5,6 +5,13 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
 }
+.contener {
+    position: relative;
+    padding-bottom: 100px;
+    height: 100%;
+    
+}
+
 /*Estilo de login y registro*/
 .fondo-login{
     background-image: url(../img/fondo-login.png);
@@ -151,4 +158,5 @@
     .contenedor_login-register form{
         position: relative;
     }
+
 } 
