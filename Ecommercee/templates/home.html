@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    {% include "cabecera.html" %}
+<body>
+    {% include "menu.html" %}
+    <section class="banner-principal">
+        
+    </section>
+    <section class="lista-categorias">
+        <h2>CATEGORIAS</h2>
+        <div class="contenido">
+            <!--<div class="item-categoria">
+                <div class="box-texto">
+                    <p>ROPEROS</p>
+                </div>
+                <div class="box-imagen"><a href="/productos/"><img src='{% static "img/cat1.png" %}'></a></div>
+            </div>
+            <div class="item-categoria">
+                <div class="box-imagen"><a href="/productos/"><img src='{% static "img/cat2.png" %}'></a></div>
+                <div class="box-texto">
+                    <p>ESCRITORIOS</p>
+                </div>
+            </div>
+            <div class="item-categoria">
+                <div class="box-texto">
+                    <p>CLOSETS</p>
+                </div>
+                <div class="box-imagen"><a href="/productos/"><img src='{% static "img/cat3.png" %}'></a></div>
+            </div>
+            <div class="item-categoria">
+                <div class="box-imagen"><a href="/productos/"><img src='{% static "img/cat4.png" %}'></a></div>
+                <div class="box-texto">
+                    <p>CAMAROTES</p>
+                </div>-->
+            <!--ACA HIBA UN DIV-->
+            <!--TEST-->
+            {% for cat in categorias %}
+                {% if cat.id|divisibleby:2 %}
+                    <div class="item-categoria">
+                        <div class="box-texto">
+                            <p>{{cat.categoria}}</p>
+                        </div>
+                        <div class="box-imagen"><a href="/productos/"><img src='{% static "/" %}{{cat.foto}}'></a></div>
+                    </div>
+                {% else %}          
+                    <div class="item-categoria">
+                        <div class="box-imagen"><a href="/productos/"><img src='{% static "/" %}{{cat.foto}}' ></a></div>
+                            <div class="box-texto">
+                        <p>{{cat.categoria}}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <!--TEST-->
+        </div><!--ESTE DIV-->
+    </section>
+    {% include "pie_pagina.html" %}
+</body>
+</html>

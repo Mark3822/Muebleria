@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Ecommercee.views import login
+from Ecommercee.views import login,home,productos, validar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/',login)
+    path('login/',login),
+    path('',home),
+    path('productos/',productos),
+    path('validar/',validar)
 ]

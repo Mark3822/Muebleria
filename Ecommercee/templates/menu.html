@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+        
+            <div class="Logo">
+                <img class="LogoMueble" src='{% static "img/LogoMuebleriaTrujillo.png" %}' >
+            </div>
+        <nav class="navigation">    
+            <ul class="menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li class="submenu">
+                    <img src='{% static "img/cart.png" %}' alt="">
+                    <div id="carrito">
+                        <p class="vacio">carrito vacio</p>
+                        <table id="lista-carrito" class="u-full-width">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Muebles</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                        <a href="#" id="vaciar-carrito"
+                        class="button u-full-width">vaciar carrito</a>
+                     </div>
+                    </li>       
+            </ul>
+        </nav>
+       </div>
+    </header>
+</body>
+
+</html>

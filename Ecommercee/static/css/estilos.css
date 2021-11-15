@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    
 }
 .contener {
     position: relative;
@@ -52,14 +53,16 @@
 }
 .caja_trasera div p,
 .caja_trasera div button{
-    margin-top:30px;
+    padding: 0 40px;
+    
 }
+
 .caja_trasera div h3{
     font-weight: 400;
     font-size: 26px;
 }
 .caja_trasera button{
-    padding: 10px 40px;
+    padding: 0 40px;
     border: 2px solid #fff;
     font-size: 14px;
     background: transparent;
@@ -111,7 +114,7 @@
     outline: none;
 }
 .contenedor_login-register form button{
-    padding: 10px 40px;
+    padding: 0px 40px;
     margin-top: 40px;
     border: none;
     font-size: 14px;
@@ -160,3 +163,64 @@
     }
 
 } 
+/*****ESTILOS PAGINA HOME*****/
+.banner-principal{
+    
+    width: 100%;
+    background-image: url('../img/slider3.jpg');
+    background-position: 25% 75%;
+    background-attachment: fixed;
+    height: 60vh;
+    
+}
+#item-carrito::before{
+    content: url('../img/car.png');
+    margin-right: 3px;
+}
+.lista-categorias h2{
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 33px;
+}
+
+.item-categoria{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+.item-categoria .box-texto{
+    background-image: linear-gradient(270deg, #e6e6e6de, #d6caca, rgba(242, 247, 242, 0.856), 
+    #e2dfdf, #cccac8de);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+}
+.item-categoria .box-texto p{
+    width: 100%;
+    font-size: 30px;
+    color:black
+}
+.item-categoria .box-texto p a{
+    color:white
+}
+
+.item-categoria .box-imagen{
+    text-align: center;
+    height: 300px;
+}
+.item-categoria .box-imagen img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.lista-categorias{
+    padding: 0 50px 50px 50px;
+    background: rgba(0, 0, 0, 0.4);
+}
+.lista-categorias .contenido{
+    margin-top: 50px ;
+    background-color:white;
+}
+/*********************************/

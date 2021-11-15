@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Muebleria Trujillo</title> 
+    <link rel="stylesheet" href='{% static "css/skeleton.css" %}'>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    {% include "menu.html" %}
+
+    <div class="carousel">
+        <div class="carousel__contenedor">
+
+            <div class="carousel__lista">
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble1.png" %}' class="foto-mueble" alt="Rock and Roll Hall of Fame">
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble2.png" %}' class="foto-mueble" alt="Constitution Square - Tower I">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble3.png" %}' class="foto-mueble" alt="Empire State Building">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble4.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble5.png" %}' class="foto-mueble" alt="Empire State Building">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble6.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble2.png" %}' class="foto-mueble" alt="Empire State Building">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble3.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble4.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble5.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble6.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+                <div class="carousel__elemento">
+                    <img src='{% static "img/mueble2.png" %}' class="foto-mueble" alt="Harmony Tower">
+
+                </div>
+            </div>
+      
+        </div>
+        <div role="tablist" class="carousel__indicadores"></div>
+    </div>
+
+    <div id="lista-platillos" class="container">
+        <h1 class="encabezado">Pedidos en Linea</h1>
+
+        <div class="row">
+            {% for p in productoxCat %}
+            <!--MUEBLES SEGUN CATEGORIA-->
+            <div class="four">
+                <div class="card">
+                    <img src='{% static "/" %}{{p.foto}}' class="imagen-platillo u-full-width">
+                    <div class="info-card">
+                        <h4>{{p.nombre}}</h4>
+                        <p>Descripción: {{p.descripcion}}</p>
+                        <p>Stock: {{p.stock}}</p>
+                        <img src='{% static "img/estrellas.png" %}'>
+                        <p class="precio">{{p.precio}}<span class="u-pull-right">s/219.00</span> </p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar
+                            al carrito</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!--FIN MUEBLES SEGUN CATEGORIA-->
+        </div>
+    </div>
+
+    <!--Footer-->    
+    {% include "pie_pagina.html" %}
+</body>
+
+</html>

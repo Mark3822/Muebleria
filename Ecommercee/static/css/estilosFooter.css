@@ -23,14 +23,11 @@ body{
 ul{
 	list-style: none;
 }
-.footer{
-    margin-top: 65px;
+.footer {
 	background-color: #24262b;
     padding:  50px;
     bottom: 0;
     width: 100%;
-   
-    
 }
 .footer-col{
    width: 25%;

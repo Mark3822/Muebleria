@@ -1,0 +1,266 @@
+body {
+    background-color: #17181b;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+header {
+    padding: 20px 0 0 0;
+    background: #1d2124;
+    text-align: center;
+}
+
+@media (min-width : 750px) {
+    header {
+        text-align: left;
+    }
+}
+
+.borrar-platilo {
+    background-color: #fbaf32;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color:rgb(71, 71, 71);
+    font-weight: bold;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    height: 551px;
+}
+.encabezado {
+    margin: 30px 0;
+    color: white;
+}
+.submenu {
+    position: relative;
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: #17181b;
+    padding: 20px;
+}
+.vacio {
+    padding: 10px;
+    background-color: #fbaf32;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+.button {
+    background-color: #fbaf32;
+    color: rgb(255, 255, 255);
+}
+.logo-m{
+    display:flex;
+    margin: 20px 20px;
+    width: 150px; 
+}
+
+.barra {
+    padding: 20px 0;
+    background: #fbaf32;
+    background: -webkit-linear-gradient(left, #b95a00 0%,#ad5400 100% );
+}
+.barra p {
+    margin: 0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom: 0;
+    }
+}
+#lista-platillos .row {
+    margin-bottom: 20px;
+}
+.agregar-carrito{
+    margin: 10px 0;
+}
+.card {
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #1d2124;
+}
+@media (min-width:550px){
+    .card {
+        text-align: left;
+    }
+}
+.info-card {
+    padding: 10px 20px;
+    color: white;
+}
+.info-card p,
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+
+
+.row .four .imagen-platillo{
+    height: 270px;
+}
+
+.row .four .card{
+    
+    float: left;
+    margin: auto;
+    height: 534px;
+    width: 290.40px;
+    margin-bottom:2%;
+    margin-left:2%;
+
+}
+
+/*carousel*/
+.carousel__contenedor {
+	position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente{
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: rgb(12, 11, 11);
+	opacity: 30%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior {
+	left: -20px;
+}
+
+.carousel__siguiente {
+	right: -20px;
+}
+
+.carousel__elemento .foto-mueble{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+    width: 400px;
+    max-width: 400px;
+    height: 350px;
+
+}
+
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #fff;
+	opacity: .2;
+	border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+.LogoMueble{
+    Width: 50%;
+    height: auto;
+    
+}
+.Nav-header{
+    width: 100%;  
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.header{
+   background: #fff;
+   transition: all 400ms;
+  
+     
+}
+.header a{
+    color: black;
+    text-decoration: none;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.navigation ul li{
+    display: inline-block;
+
+}
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.navigation ul li a:hover{
+    background: #fbaf32;
+    margin-left: 10px;
+}
+.navigation li {
+    margin-right: 15px;
+    font-size: 1.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
