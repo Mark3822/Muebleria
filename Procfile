@@ -1,0 +1,1 @@
+web: gunicorn MuebleriaDjango.wsgi --log-file -

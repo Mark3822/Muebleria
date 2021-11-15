@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t+$%+jv2*ay$*yb_9146=tboz^&ahm9#3y0@^*80*77zv@32#('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'MuebleriaDjango.urls'
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'MuebleriaDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/Marco/Desktop/Muebleria/Ecommercee/templates/"],
+        'DIRS': ["C:/Users/Alex/Desktop/UNTELS/VIII/ing software/heroku/Muebleria/Ecommercee/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,15 +85,25 @@ WSGI_APPLICATION = 'MuebleriaDjango.wsgi.application'
 #    }
 #}
 
+""" local
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
         'NAME': 'muebleria',
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': '12345',
         'HOST': 'localhost',
         'PORT': '5432'
     }
+}
+"""
+import dj_database_url
+from decouple import config
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
 
 # Password validation
@@ -138,3 +149,5 @@ STATICFILES_DIRS = ( BASE_DIR, 'Ecommercee/static') # CONFIGURACION DE STATIC 20
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
