@@ -36,7 +36,7 @@ ul {
 }
 
 .hero {
-    background-image: url(../img/hero.jpg);
+    /*background-image: url(../img/hero.jpg);*/
     height: 551px;
 }
 .encabezado {
