@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.config import settings
-from django.config.urls.static import static
+import settings
+import static
 from Ecommercee.views import login,home,productos, validar
 
 urlpatterns = [
